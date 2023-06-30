@@ -1,0 +1,140 @@
+/*  Change the background color of the page body */
+body {
+  background-color: #f0f0f0;
+}
+/* Change the default text color */
+body {
+  color: rgb(29, 29, 56);
+}
+/* Define the font family */
+body {
+  font-family: "Open Sans ", sans-serif;
+}
+/* Add spacing (padding/margin) between sections */
+section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+/* font size, weight, and color of all headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: #333333;
+}
+h1 {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1.8rem;
+}
+/*styled blocks "Experience" */
+.experience {
+  list-style: none;
+  padding: 0;
+}
+.experience li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+  border-radius: 5px;
+}
+/*styled blocks "Skills" */
+.skills {
+  list-style: none;
+  padding: 0;
+}
+.skills li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+/*  "Leave a Message" form elements  */
+/* Change font size and color of labels */
+label {
+  font-size: 16px;
+  color: rgb(29, 29, 56);
+}
+/* Change font size, padding, border, etc. of inputs and textarea */
+input,
+textarea {
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Add spacing (padding/margin) between form fields */
+form input,
+form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+/* Change padding, background color, border, etc. of submit button */
+form[name="leave_message"] button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #808681;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+form[name="leave_message"] button[type="submit"]:hover {
+  background-color: #545754;
+}
+/* Transform the "Messages" list items into styled blocks */
+.message {
+  list-style: none;
+  padding: 0;
+}
+.message li {
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #545754;
+  border-radius: 5px;
+}
+/* Change the spacing and background color of the footer */
+footer {
+  font-size: 16px;
+  background-color: #808681;
+  padding: 20px;
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+/* styles for the image */
+img {
+  border: 2px solid #333333;
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+/* menu inline */
+.menu {
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 10px;
+}
+/* remove point */
+#email,
+#github {
+  list-style: none;
+  margin-bottom: 10px;
+}
