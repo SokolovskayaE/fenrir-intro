@@ -2,13 +2,25 @@
 <html>
   <head>
     <title>Home | Elena Sokolovskaya</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Define the font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <h1>Elena Sokolovskaya</h1>
-    <a href="#About">About</a><br />
-    <a href="#Experience">Experience</a><br />
-    <a href="#Skills">Skills</a><br />
-    <a href="#Connect">Connect</a><br />
+
+    <!-- Add/upload picture of yourself  -->
+    <img src="images/Elena Sokolovskaya.jpg" alt="Elena Sokolovskaya" /><br />
+
+    <li class="menu"><a href="#About">About</a></li>
+    <li class="menu"><a href="#Experience">Experience</a></li>
+    <li class="menu"><a href="#Skills">Skills</a></li>
+    <li class="menu"><a href="#Connect">Connect</a></li>
     <section id="About">
       <h2>About</h2>
       <p>
@@ -26,7 +38,7 @@
     </section>
     <section id="Experience">
       <h2>Experience</h2>
-      <ul>
+      <ul class="experience">
         <li>Senior Trainer in CRM implantation.</li>
         <li>International business developer.</li>
         <li>Export Area Manager.</li>
@@ -35,18 +47,18 @@
     </section>
     <section id="Skills">
       <h2>Skills</h2>
-      <ul></ul>
+      <ul class="skills"></ul>
     </section>
     <section id="Connect">
       <h2>Connect</h2>
       <ul>
-        <li>
+        <li id="email">
           <strong>Email: </strong
           ><a href="mailto:ev.sokolovskaya@gmail.com"
             >ev.sokolovskaya@gmail.com</a
           >
         </li>
-        <li>
+        <li id="github">
           <strong>GitHub: </strong
           ><a href="https://github.com/SokolovskayaE">SokolovskayaE</a>
         </li>
@@ -56,11 +68,11 @@
       <h2>Leave a Message</h2>
       <form name="leave_message">
         <label for="usersName">Name:</label>
-        <br />
+        <!-- <br /> -->
         <input type="text" id="usersName" name="usersName" required />
-        <br />
+        <!-- <br /> -->
         <label for="usersEmail">E-mail:</label>
-        <br />
+        <!-- <br /> -->
         <input type="email" id="usersEmail" name="usersEmail" required />
         <br />
         <label for="usersMessage">Message:</label>
@@ -69,15 +81,15 @@
           name="usersMessage"
           id="usersMessage"
           required
-          cols="17"
-          rows="5"
+          cols="59"
+          rows="2"
         ></textarea>
         <button type="submit">Submit</button>
       </form>
     </section>
     <section id="messages">
       <h2>Messages</h2>
-      <ul></ul>
+      <ul class="message"></ul>
     </section>
     <section>
       <hr />
