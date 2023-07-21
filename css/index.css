@@ -10,6 +10,7 @@ body {
 body {
   font-family: "Open Sans ", sans-serif;
 }
+
 /* Add spacing (padding/margin) between sections */
 section {
   margin-bottom: 20px;
@@ -36,8 +37,23 @@ h5,
 h6 {
   font-size: 1.8rem;
 }
+
+/*navigational header 
+.main-header {
+  background-color: #808681;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}*/
+
 /*styled blocks "Experience" */
+/*change the layout of "Experience" section using rows so items are displayed in a grid rather than a list*/
 .experience {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, auto));
+  grid-gap: 20px;
   list-style: none;
   padding: 0;
 }
@@ -63,28 +79,29 @@ h6 {
   flex-wrap: wrap;
   margin: 10px;
 }
-/*  "Leave a Message" form elements  */
+/* "Leave a Message" form elements  */
 /* Change font size and color of labels */
-label {
+/* Update the "Leave a Message" form to use Flexbox*/
+form[name="leave_message"] {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+form[name="leave_message"] label {
   font-size: 16px;
   color: rgb(29, 29, 56);
+  margin-bottom: 10px;
 }
 /* Change font size, padding, border, etc. of inputs and textarea */
-input,
-textarea {
+form[name="leave_message"] input,
+form[name="leave_message"] textarea {
   font-size: 14px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
-/* Add spacing (padding/margin) between form fields */
-form input,
-form textarea {
   margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
 }
+
 /* Change padding, background color, border, etc. of submit button */
 form[name="leave_message"] button[type="submit"] {
   padding: 10px 20px;
@@ -130,7 +147,8 @@ img {
 .menu {
   margin-bottom: 20px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 5px;
+  padding: 0px;
 }
 /* remove point */
 #email,
@@ -138,3 +156,26 @@ img {
   list-style: none;
   margin-bottom: 10px;
 }
+
+/*Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) */
+@media (max-width: 768px) {
+  /* tablet devices */
+  label {
+    font-size: 18px;
+  }
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  /* desktop devices */
+  label {
+    font-size: 20px;
+  }
+  input,
+  textarea {
+    font-size: 18px;
+  }
+}
+
