@@ -70,7 +70,8 @@ githubRequest.addEventListener("load", (event) => {
       let project = document.createElement("li");
       // Set the inner text of your project variable to the current Array element's name property
       //project.innerText = repositories[i].name;
-      project.innerText = repo.name;
+      //project.innerText = repo.name;
+      project.innerHTML = `<a class="link link--no-decor" href="${repo.html_url}">${repo.name}</a>`;
       // Transform your repository names into <a> tags that link to GitHub (hint: html_url property)
       //project.innerHTML = `<a class="link link--no-decor" href="https://github.com//SokolovskayaE/fenrir-intro ">Intro to programming FENRIR</a>`;
       // append the project element to the projectList element
