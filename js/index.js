@@ -64,10 +64,13 @@ githubRequest.addEventListener("load", (event) => {
     // Query the projectSection (instead of the entire document) to find the <ul> element and store it in a variable named projectList
     let projectList = projectSection.querySelector("ul");
     // For loop to iterate over your repositories Array, starting at index 0
-    for (let i = 0; i < repositories.length; i++) {
+    //for (let i = 0; i < repositories.length; i++) {
+    for (let repo of repositories) {
       // Create a new list item (li) element and store it in a variable named project
       let project = document.createElement("li");
-      project.innerText = repositories[i].name; // Set the inner text of your project variable to the current Array element's name property
+      // Set the inner text of your project variable to the current Array element's name property
+      //project.innerText = repositories[i].name;
+      project.innerText = repo.name;
       // Transform your repository names into <a> tags that link to GitHub (hint: html_url property)
       //project.innerHTML = `<a class="link link--no-decor" href="https://github.com//SokolovskayaE/fenrir-intro ">Intro to programming FENRIR</a>`;
       // append the project element to the projectList element
