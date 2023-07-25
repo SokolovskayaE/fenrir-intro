@@ -76,6 +76,7 @@ messageForm.addEventListener("submit", function (event) {
 // }
 //});
 
+
 // Fetch API: getting data from GitHub API
 fetch("https://api.github.com/users/SokolovskayaE/repos")
   .then((response) => response.json()) // Convert the response to JSON
