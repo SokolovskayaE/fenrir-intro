@@ -2,10 +2,12 @@
 body {
   background-color: #f0f0f0;
 }
+
 /* Change the default text color */
 body {
   color: rgb(29, 29, 56);
 }
+
 /* Define the font family */
 body {
   font-family: "Open Sans ", sans-serif;
@@ -16,6 +18,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
+
 /* font size, weight, and color of all headings */
 h1,
 h2,
@@ -79,6 +82,20 @@ h6 {
   flex-wrap: wrap;
   margin: 10px;
 }
+
+/*styled blocks "Projects" */
+.projects {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+
+/*styled blocks "Connect" */
+.connect {
+  list-style: none;
+  padding: 0;
+}
+
 /* "Leave a Message" form elements  */
 /* Change font size and color of labels */
 /* Update the "Leave a Message" form to use Flexbox*/
@@ -92,6 +109,7 @@ form[name="leave_message"] label {
   color: rgb(29, 29, 56);
   margin-bottom: 10px;
 }
+
 /* Change font size, padding, border, etc. of inputs and textarea */
 form[name="leave_message"] input,
 form[name="leave_message"] textarea {
@@ -115,6 +133,7 @@ form[name="leave_message"] button[type="submit"] {
 form[name="leave_message"] button[type="submit"]:hover {
   background-color: #545754;
 }
+
 /* Transform the "Messages" list items into styled blocks */
 .message {
   list-style: none;
@@ -127,6 +146,7 @@ form[name="leave_message"] button[type="submit"]:hover {
   border: 1px solid #545754;
   border-radius: 5px;
 }
+
 /* Change the spacing and background color of the footer */
 footer {
   font-size: 16px;
@@ -136,6 +156,7 @@ footer {
   color: #ffffff;
   text-align: center;
 }
+
 /* styles for the image */
 img {
   border: 2px solid #333333;
@@ -150,6 +171,7 @@ img {
   margin-left: 5px;
   padding: 0px;
 }
+
 /* remove point */
 #email,
 #github {
@@ -178,4 +200,3 @@ img {
     font-size: 18px;
   }
 }
-
