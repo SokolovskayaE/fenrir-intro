@@ -3,7 +3,7 @@ const today = new Date();
 const thisYear = today.getFullYear();
 const footer = document.querySelector("footer");
 const copyright = document.createElement("p");
-copyright.innerHTML = `&copy; Made with &hearts; by Elena Sokolovskaya ${thisYear}`;
+copyright.innerHTML = `&copy; Elena Sokolovskaya ${thisYear}`;
 footer.appendChild(copyright);
 
 // Adding skills
@@ -36,7 +36,6 @@ messageForm.addEventListener("submit", function (event) {
   const removeButton = document.createElement("button");
   removeButton.innerText = "remove";
   removeButton.type = "button";
-
   removeButton.addEventListener("click", function () {
     const entry = removeButton.parentNode;
     entry.remove();
@@ -76,10 +75,9 @@ messageForm.addEventListener("submit", function (event) {
 // }
 //});
 
-
 // Fetch API: getting data from GitHub API
 fetch("https://api.github.com/users/SokolovskayaE/repos")
-  .then((response) => response.json()) // Convert the response to JSON
+  .then((response) => response.json())
   .then((repositories) => {
     let projectSection = document.getElementById("projects");
     let projectList = projectSection.querySelector("ul");

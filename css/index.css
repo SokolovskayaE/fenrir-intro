@@ -1,25 +1,28 @@
 /*  Change the background color of the page body */
 body {
-  background-color: #f0f0f0;
+  background-color: rgb(221, 230, 237);
 }
 
 /* Change the default text color */
 body {
-  color: rgb(29, 29, 56);
+  color: rgb(39, 55, 77);
 }
 
 /* Define the font family */
 body {
   font-family: "Open Sans ", sans-serif;
+  color: rgb(39, 55, 77);
 }
 
 /* Add spacing (padding/margin) between sections */
 section {
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
-/* font size, weight, and color of all headings */
+/* Font size, weight, and color of all headings */
 h1,
 h2,
 h3,
@@ -27,11 +30,11 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: #333333;
+  color: rgb(39, 55, 77);
 }
 h1 {
   font-size: 2.5rem;
-  margin-right: 10px;
+  margin-left: 30px;
 }
 h2,
 h3,
@@ -41,59 +44,143 @@ h6 {
   font-size: 1.8rem;
 }
 
-/*navigational header 
-.main-header {
-  background-color: #808681;
-  color: #fff;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}*/
+/* Navigation menu */
+/* CSS to remove bullet points from list items inside the .menu class */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-left: 15px;
+}
 
-/*styled blocks "Experience" */
-/*change the layout of "Experience" section using rows so items are displayed in a grid rather than a list*/
+/* To display the menu items horizontally */
+.menu li {
+  display: inline;
+  margin-right: 10px; /* Add  space between menu items */
+}
+
+/* CSS to remove underline from anchor links inside the .menu class and put same color to the text */
+.menu a {
+  text-decoration: none;
+  color: rgb(39, 55, 77);
+  font-size: 1.5rem;
+}
+
+/* CSS to change color when the mouse hovers over the links */
+.menu a:hover {
+  color: rgb(82, 109, 130);
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1;
+  text-align: left;
+  padding: 1px;
+}
+
+.image {
+  text-align: right;
+  padding: 10px;
+}
+
+/* Styles for the image */
+img {
+  border: 2px solid rgb(82, 109, 130);
+  border-radius: 50%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* Styled blocks "Experience" */
 .experience {
-  display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(50px, auto));
-  grid-gap: 20px;
   list-style: none;
   padding: 0;
 }
+
 .experience li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
-  border: 1px solid #333333;
   border-radius: 5px;
 }
-/*styled blocks "Skills" */
+
+/* Put position on the left */
+.position {
+  order: 1;
+}
+/* Put years on the right */
+.years {
+  order: 2;
+}
+
+/* Styled blocks "Skills" */
 .skills {
   list-style: none;
   padding: 0;
 }
 .skills li {
   background-color: #f0f0f0;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 10px;
-  border: 1px solid #333333;
   border-radius: 10px;
   display: inline-block;
   flex-wrap: wrap;
-  margin: 10px;
+  margin: 5px;
 }
 
-/*styled blocks "Projects" */
+/* Styled blocks "Projects" */
 .projects {
   list-style: none;
   padding: 0;
-  line-height: 2;
 }
 
-/*styled blocks "Connect" */
+.projects li {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+/* CSS to remove underline from anchor links inside the .projects and put same color to the text */
+.projects a {
+  text-decoration: none;
+  color: rgb(39, 55, 77);
+}
+/* Capitalize the first letter of each block */
+.projects li::first-letter {
+  text-transform: uppercase;
+}
+/* CSS to change color when the mouse hovers over the links */
+.projects a:hover {
+  color: rgb(82, 109, 130);
+}
+
+/* Styled blocks "Connect" */
 .connect {
   list-style: none;
   padding: 0;
+}
+.connect li {
+  margin-bottom: 10px;
+}
+
+/* Remove underline from anchor links */
+.connect a {
+  text-decoration: none;
+  color: inherit; /* Use the same color as the parent element (li) */
+}
+
+/* Style the links with a different color when hovered */
+.connect a:hover {
+  color: rgb(82, 109, 130);
 }
 
 /* "Leave a Message" form elements  */
@@ -104,16 +191,17 @@ form[name="leave_message"] {
   flex-direction: column;
   width: 30%;
 }
+
 form[name="leave_message"] label {
   font-size: 16px;
-  color: rgb(29, 29, 56);
-  margin-bottom: 10px;
+  color: rgb(39, 55, 77);
+  margin-bottom: 5px;
 }
 
 /* Change font size, padding, border, etc. of inputs and textarea */
 form[name="leave_message"] input,
 form[name="leave_message"] textarea {
-  font-size: 14px;
+  font-size: 16px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -123,7 +211,7 @@ form[name="leave_message"] textarea {
 /* Change padding, background color, border, etc. of submit button */
 form[name="leave_message"] button[type="submit"] {
   padding: 10px 20px;
-  background-color: #808681;
+  background-color: rgb(82, 109, 130);
   color: white;
   border: none;
   border-radius: 4px;
@@ -131,7 +219,7 @@ form[name="leave_message"] button[type="submit"] {
   font-size: 16px;
 }
 form[name="leave_message"] button[type="submit"]:hover {
-  background-color: #545754;
+  background-color: rgb(157, 178, 191);
 }
 
 /* Transform the "Messages" list items into styled blocks */
@@ -143,40 +231,18 @@ form[name="leave_message"] button[type="submit"]:hover {
   background-color: #f0f0f0;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #545754;
   border-radius: 5px;
 }
 
 /* Change the spacing and background color of the footer */
 footer {
   font-size: 16px;
-  background-color: #808681;
-  padding: 20px;
-  margin-top: 20px;
+  background-color: rgb(82, 109, 130);
+  padding: 1px;
   color: #ffffff;
   text-align: center;
-}
-
-/* styles for the image */
-img {
-  border: 2px solid #333333;
-  border-radius: 50%;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-/* menu inline */
-.menu {
-  margin-bottom: 20px;
-  display: inline-block;
-  margin-left: 5px;
-  padding: 0px;
-}
-
-/* remove point */
-#email,
-#github {
-  list-style: none;
-  margin-bottom: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 /*Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) */
